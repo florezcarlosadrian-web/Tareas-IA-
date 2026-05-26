@@ -9,7 +9,7 @@ Haz una función `leer_primera_linea(nombre_archivo)` que:
 
 Pista: `archivo.readline()` lee una línea. No necesitas cerrar el archivo aún, solo imprime en `finally`.
 
-Inténtalo. Con esto ya tienes el `try/except` completo.'''
+Inténtalo. Con esto ya tienes el `try/except`
 def leer_primera_linea():
   try:
     archivo = open(Dictionary.py, 'r')
