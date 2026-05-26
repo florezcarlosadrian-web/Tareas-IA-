@@ -1,0 +1,28 @@
+
+'''*Ejercicio para ti:*
+Haz una función `leer_primera_linea(nombre_archivo)` que:
+
+1. `try`: abra el archivo
+2. `except FileNotFoundError`: devuelva `"Archivo no existe"`
+3. `else`: lea la primera línea y la devuelva
+4. `finally`: imprima `"Intento de lectura finalizado"`
+
+Pista: `archivo.readline()` lee una línea. No necesitas cerrar el archivo aún, solo imprime en `finally`.
+
+Inténtalo. Con esto ya tienes el `try/except` completo.'''
+def leer_primera_linea():
+  try:
+    archivo = open(Dictionary.py, 'r')
+  except FileNotFoundError:
+    print("archivo 📁  no existe")
+    return None
+  else:
+    primera_linea = archivo.readline()
+    # Dictionary.readline()
+  finally:
+    print ('archivo finalizado')
+    return
+leer_primera_linea()
+impor = 'u'
+if impor == 'u':
+  print('u')
