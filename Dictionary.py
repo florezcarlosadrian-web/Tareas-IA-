@@ -1,3 +1,4 @@
+'''INVENTARIO DE UNA TIENDA'''
 products = {
     'café':{'precio':9.0,'stock':50},
     'azúcar':{'precio':1.3,'stock':50},
