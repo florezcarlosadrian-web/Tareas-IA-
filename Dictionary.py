@@ -1,10 +1,21 @@
+import os
 '''INVENTARIO DE UNA TIENDA'''
 products = {
-    'café':{'precio':9.0,'stock':50},
-    'azúcar':{'precio':1.3,'stock':50},
-    'leche':{'precio':0.5,'stock':50}
+    'café':{
+      'precio':9.0,
+      'stock':50
+    },
+    'azúcar':{
+      'precio':1.3,
+      'stock':50
+    },
+    'leche':{
+      'precio':0.5,
+      'stock':50
+    }
 }
 def mostrar_menu():
+    
     print('\n===MENÚ DE INVENTARIO===')
     print('1.Mostrar productos')
     print('2.Consultar precio')
@@ -14,18 +25,21 @@ def mostrar_menu():
     print('6.Actualizar Stock')
     print('7.Salir')
     print('=' * 30)
+    
 
 # función para mostrar los artículos del diccionario
 def mostrar_articulos(dict_productos):
-    print('Estos son los productos:')
+    print('=== INVENTARIO ===')
     for productos,info in dict_productos.items():
-        print(f"-{productos} precio=${info['precio']}, Stock={info['stock']}")
+        print(f"-{productos}:  precio= {info['precio']}$, Stock= {info['stock']}")
 # función para consultar precio
 def mostrar_precio(dict_productos):
+    print("=== Mostrar precio ===")
     compra = input("nombre de producto: ").lower()
     print(compra,dict_productos.get(compra,{}).get('precio','no existe'))
 # función para calcular el Valor total del inventario
 def calcular_total_inventario(dict_productos):
+    print("===Calcular total inventario===")
     total_inventario = 0
     for nombre_producto, info in dict_productos.items():
         precio = info.get('precio',0)
@@ -86,19 +100,25 @@ def main():
         print("Pulsar Enter/pulsar Espacio.Salir de opción")
         opcion = input(" Elejir Opciones:  ")
         if opcion == '1':
+            os.system("clear")
             mostrar_articulos(products)
         elif opcion == '2':
+            os.system("clear")
             mostrar_precio(products)
         elif opcion == '3':
+            os.system("clear")
             añadir_producto(products)
         elif opcion == '4':
-            print("===Calcular total inventario===")
+            os.system("clear")
             calcular_total_inventario(products)
         elif opcion == '5':
+            os.system("clear")
             eliminar_producto(products)
         elif opcion == '6':
+            os.system("clear")
             actualizar_stock(products)
         elif opcion == '7':
+            os.system("clear")
             print("Cerrado inventario")
             break
         else:
